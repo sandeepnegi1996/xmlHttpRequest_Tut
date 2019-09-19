@@ -34,7 +34,7 @@ const sendHttpRequest=(method,url,data)=>{
         //this xhr.error will run when we dont have a successful request
         //but in case when we omit the password the request is not proper
         //but the request is complete
-        
+
         xhr.error=()=>{
             reject('something went wrong');
         }
@@ -55,7 +55,7 @@ const getData=()=>{
 const sendData=()=>{
     sendHttpRequest('POST','https://reqres.in/api/register',{
         email:'eve.holt@reqres.in',
-     //   password:'pistol'
+        password:'pistol'
     }).then((responseData)=>{
         console.log(responseData);
     }).catch((err)=>{
